@@ -2,17 +2,17 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// array of questions for user
+// array of questions for user input
 const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Please provide a project title.  (Required)',
+        message: 'Please provide a project name  (Required)',
         validate: nameInput => {
             if (nameInput) {
                 return true;
             } else {
-                console.log('Please provide a project title!');
+                console.log('Please provide a project name!');
                 return false;
             }
         }
